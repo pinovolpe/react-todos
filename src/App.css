@@ -1,3 +1,15 @@
+* {
+  outline: 0 !important;
+}
+
+body {
+  background-color: #f4ebbe;
+}
+
+a {
+  color: #61dafb;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +17,19 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-top: 40px;
+}
+
+.App-show {
+  display: block;
+}
+
+.App-hide {
+  display: none;
+}
+
+.App-invisible {
+  visibility: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,8 +39,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #75704e;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +49,112 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-main {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-main form,
+.App-editing form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App-editing form {
+  width: 100%;
+}
+
+.App-main input {
+  width: 70vmin;
+  background-color: #a7cecb;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-main li input {
+  /* width: 90vmin; */
+  background-color: transparent;
+  padding: 0;
+}
+
+.App-editing {
+  /* width: 90vmin; */
+  background-color: #a7cecb !important;
+  padding: 0;
+}
+
+.App-main button {
+  color: white;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+}
+
+.App-main form button,
+.App-editing button {
+  background-color: #8ba6a9 !important;
+}
+
+.App-main form button:hover,
+.App-editing button:hover {
+  background-color: #729397 !important;
+}
+
+.App-main li button {
+  background-color: #bcbf73;
+}
+
+.App-main li button:hover {
+  background-color: #afb257;
+}
+
+.App-main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.App-enter li {
+  width: 100vmin;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background-color: #a7cecb;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.App-list li {
+  width: 100vmin;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background-color: #cacc90;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.App-controls {
+  flex-shrink: 0;
+  display: flex;
+  gap: 10px;
 }
 
 @keyframes App-logo-spin {
